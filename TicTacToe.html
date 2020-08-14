@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <title>Tic Tac Toe</title>
+    </head>
+    <body>
+        <div id="app">
+            <div class="status">{{ status }}</div>
+            <button @click="resetClicked">Reset</button>
+            <template v-for="row in 3">
+                <div class="row" :key="row">
+                    <button v-for="button in 3" class="square" style="width: 40px; height: 40px;" @click="handleClicked($event)">&nbsp;</button>
+                </div>
+            </template>
+        </div>
+        <script src="./Vue-TicTacToe.js"></script>
+    </body>
+</html>
